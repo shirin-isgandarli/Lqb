@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The CLI developers install as a .NET tool, then run: dotnet lqb add <Name> -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>dotnet-lqb</ToolCommandName>
+    <PackageId>Lqb.Tool</PackageId>
+    <Description>Generates Liquibase changesets from EF Core model changes.</Description>
+    <!-- Run on whatever newer runtime the machine has (.NET 9, 10, ...). -->
+    <RollForward>Major</RollForward>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Ships lqb-host.dll inside the tool package. -->
+    <ProjectReference Include="..\Lqb.Host\Lqb.Host.csproj" />
+  </ItemGroup>
+</Project>

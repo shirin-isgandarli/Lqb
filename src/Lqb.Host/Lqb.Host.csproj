@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Tiny launcher with NO package references. It runs inside the developer's app
+       dependency graph, so it must not bring its own EF Core version. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>lqb-host</AssemblyName>
+    <RootNamespace>Lqb.Host</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+</Project>
